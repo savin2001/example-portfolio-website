@@ -1,0 +1,191 @@
+body {
+    width: 100%;
+    letter-spacing: 1px;
+    transition: 1s ease-in;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header"
+      "main"
+      "footer";
+  }
+  #navbar {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(45deg, #eb3349, #f45c43);
+    color: #fff;
+    transition: 2s step-end;
+    
+  }
+  #navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  main {
+    grid-area: main;
+    margin: 3% 0 0 -3%;
+    
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+  }
+  h2 {
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 2px;
+    transition: 1.5s ease-in;
+  }
+  P {
+    font-family: 'Open Sans', sans-serif;
+    transition: 1.5s ease-in;
+  }
+  #navbar h2 {
+      font-size: 2rem;
+      color: yellow;
+      letter-spacing: 3px;
+      font-family: 'Lobster', cursive;
+  }
+  #navbar ul a {
+      text-decoration: none;
+      color: #fff;
+      padding: 1rem 1rem;
+      font-size: 1.2rem;
+      font-family: 'Quicksand', sans-serif;
+      transition: .7s;
+  }
+  #navbar ul a:hover{
+      color: yellow;
+      padding: 1rem 1.3rem;
+      font-size: 1.5rem;
+      transition: .7s;
+  }
+  
+  #welcome-section {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(50%, 1fr) );
+    grid-template-rows: auto;
+    width: 100%;
+    padding: 2rem 3rem;
+    background: linear-gradient(45deg,#7b4397,#dc2430);
+  }
+  #welcome-section #text {
+    grid-area: left;
+    text-align: center;
+    transition: 2s ease-in;
+  }
+  #text h1 {
+    font-size: 3rem;
+    transition: 1.5s ease-in;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  #text p {
+    font-size: 1.5rem;
+    transition: 2s linear;
+    color: rgb(15, 240, 165);
+    font-family: 'Dancing Script', cursive;
+
+  }
+  #welcome-section #display {
+    grid-area: right;
+  }
+  #about {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 3rem;
+    background: linear-gradient(15deg, #eacda3, #d6ae7b);
+  }
+#projects { 
+    width: 100%;  
+    text-align: center;
+    padding: 2rem 3rem;
+    background: linear-gradient(75deg, #02aab0, #00cdac);
+}
+#projects .projects-resizing {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    column-gap: 10px;
+    row-gap: 15px;
+
+}
+.project-tile {
+    width: 100%;
+    border: 1px solid rgb(15, 240, 165) ;
+    font-family: 'Open Sans', sans-serif;
+    transition: 1.5s ease-in;
+    box-shadow: 10px 13px 15px solid grey;
+}
+.project-tile a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    transition: .7s;
+}
+.project-tile a p:hover  {
+    color: yellow;
+    font-size: 1.1rem;
+    transition: .7s;    
+}
+#contact {
+    grid-area: footer;
+    text-align: center;
+    color: #fff;
+    padding: 2rem 3rem;
+    background: linear-gradient(90deg, #381a47 , #6e0e14);
+    margin: 0 0 0 -3%;
+    transition: 1s step-end;
+  }
+  .profile-link li i {
+    padding: 2rem 0.75rem;
+    color: white;
+    transition: .7s;
+  }
+  .profile-link li i:hover {
+    padding: 2rem 1.5rem;
+    color: yellow;
+    transition: .7s;
+  }
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+    }
+    #navbar h2 {
+        padding: 1rem;
+    }
+    #navbar ul {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        visibility: hidden;
+        
+      }
+    #welcome-section {
+      padding-top: 4rem;
+        margin-top: 5% 0;
+        grid-template-areas: 
+        " left "
+        " right ";
+    }
+}
